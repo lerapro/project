@@ -1,0 +1,70 @@
+body {
+    margin: 0;
+    overflow: hidden;
+}
+
+.rex-runner-game {
+    position: relative;
+    width: 30%;
+    height: 1000px;
+}
+
+.dino {
+    position: absolute;
+    top: 400px;
+    left: 100px;
+
+    height: 100px;
+    width: 100px;
+
+    background-image: url('./img/DinoSprites.png');
+    background-size: cover;
+    animation: runAnimation 0.9s steps(5) infinite;
+    background-position: -400px;
+
+    transition: top 0.5s ease;
+}
+
+@keyframes runAnimation {
+    to {
+        background-position: -900px;
+    }
+}
+
+
+.cactus {
+    position: absolute;
+    top: 440px;
+    right: 0;
+    height: 80px;
+
+    transform: translate(-50%, -50%);
+}
+
+.moveAnimation {
+    animation: moveCactusAnimation 3s linear infinite;
+}
+
+@keyframes moveCactusAnimation {
+    0% {
+        right: 0;
+        transform: translate(-50%, -50%);
+    }
+
+    25% {
+        transform: translate(-50%, -50%);
+    }
+
+    50% {
+        transform: translate(50%, -50%);
+    }
+
+    75% {
+        transform: translate(50%, -50%);
+    }
+
+    100% {
+        right: 100%;
+        transform: translate(-50%, -50%);
+    }
+}
